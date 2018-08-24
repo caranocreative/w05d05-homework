@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <h1>Edit Dog Page</h1>
+
+  <form action="/dogs/<%= dogs.id %>?_method=PUT" method="POST">
+    Name: <input type="text" name="name" value="<%= dogs.name %>">
+    Breed: <input type="text" name="breed" value="<%= dogs.breed %>">
+    Color: <input type="text" name="color" value="<%= dogs.color %>">
+    Toy: <input type="text" name="toy" value="<%= dogs.toy %>">
+    <br/>
+    <button type="submit">Update Dog</button>
+  </form>
+  <br/>
+</body>
+</html>

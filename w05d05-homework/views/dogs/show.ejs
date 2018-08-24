@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title></title>
+     <!-- <link rel="stylesheet" href="/css/app.css"> -->
+ </head>
+   <body>
+    <header>
+
+     <h1>Show Page for <%=dogs.name%></h1>
+       <nav>
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/dogs/">Dog Index</a></li>
+
+
+        </ul>
+      </nav>
+     </header> <!-- header -->
+
+<main>
+  <section>
+  <h2>list of dogs</h2>
+  <ul>
+    <li>Name: <%=dogs.name%></li>
+    <li>Breed: <%=dogs.breed%></li>
+    <li>Color: <%=dogs.color%></li>
+    <li>Toy: <%=dogs.toy%></li>
+</ul>
+</section>
+
+<section>
+  <a href="/dogs/<%=dogs.id%>/edit">Edit</a>
+</section>
+
+<section>
+  <form action="/dogs/<%=dogs.id%>?_method=DELETE" method="POST">
+    <button type="submit">Delete dog</button>
+  </form>
+   </body>
+</html>
